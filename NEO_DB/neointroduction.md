@@ -1,3 +1,5 @@
 [Voltar](../documentacao.md)
 # NEO
-esta tela ainda sera desenvolvida
+- [Server scripts](./SERVERSCRIPT/serverscript.md)
+  
+## esta tela ainda sera desenvolvida

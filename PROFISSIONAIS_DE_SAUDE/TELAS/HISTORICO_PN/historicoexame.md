@@ -1,5 +1,8 @@
 [Voltar](./historicopn.md)
 # Histórico exame
+### LINKS
+- [Anexos exame](./anexosexame.md)
+  
 ### Como chamar o path
 ~~~ python
 "actions": [

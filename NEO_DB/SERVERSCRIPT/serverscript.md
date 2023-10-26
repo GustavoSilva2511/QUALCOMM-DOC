@@ -1,4 +1,4 @@
 [Voltar](../neointroduction.md)
 ## Scripts de servidores
-- [editExams]()
-- [saveImages]()
+- [Childtableapi](./SCRIPTS/childtableapi.md)
+- [Prenatal](./SCRIPTS/prenatal.md)

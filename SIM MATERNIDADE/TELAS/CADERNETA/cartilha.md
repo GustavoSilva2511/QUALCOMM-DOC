@@ -1,7 +1,7 @@
 [Voltar](../../wikipedia.md)
 # Cartilha
 ### LINKS
-é link que nao acaba mais
+Diversos links semelhantes
 
 ### Como chamar o path
 ~~~ python

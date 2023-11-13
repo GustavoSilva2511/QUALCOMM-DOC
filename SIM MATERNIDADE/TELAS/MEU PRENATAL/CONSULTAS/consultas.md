@@ -3,40 +3,21 @@
 ### LINKS
 - [Detalhe da consulta](./detalheconsulta.md)
 - [Cadastro de consulta](./cadastroconsulta.md)
+  
+### Action
+- Name: open
+- Path: CONSULTA-CONNECT
+- PermissionLevel: 1
+- Parameters: Não
+- Querystring: Não
 
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "name": "open",
-        "path":"CONSULTA-CONNECT"
-    }
-]
-~~~
 
-### Corpo do path no manager
-``` json
-{
-    "identifier": "CONSULTA-CONNECT",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/gestantes/consulta2/response",
-        "method": "POST",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-        "body": {
-            "email": "[[EMAIL]]"
-        }
-    }
-}
-
-```
+### Manager
+- Identifier: CONSULTA-CONNECT
+- Url: https://api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/gestantes/criarConsulta/get_form
+- Method: POST
+- Header: Sim
+- Querystring: Sim
 
 ### REQUISIÇÕES
 ~~~ python

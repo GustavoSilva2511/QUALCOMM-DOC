@@ -5,44 +5,19 @@
 - [Editar anexos](./editaranexos.md)
 - [Excluir exame](./excluirexame.md)
 
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "publishLevel": 1,
-        "permissionLevel": 2,
-        "title": "Detalhes consulta",
-        "name": "open",
-        "color": "#7c9ffe",
-        "path": "DETALHE-CONSULTA-EXAME-CONNECT",
-        "parameters": [
-            {
-                "title": "querystring",
-                "value": f"?data={'/'.join(i['scheduled'].replace('-', '/')[:-9].split('/')[::-1])}&horario={':'.join(i['scheduled'].replace('-', '/')[-9:-3].split(':'))}&name={i['name']}&exame={i['schedule']}&tipoExame={i['schedule_type']}&semanaGestacao={i['gestational_week']}&local={i.get('locale')}"
-            }
-        ]
-    }
-]
-~~~
+### Action
+- Name: open
+- Path: DETALHE-CONSULTA-EXAME-CONNECT
+- PermissionLevel: 2
+- Parameters: Sim
+- Querystring: Sim
 
-### Corpo do path no manager
-``` json
-{
-    "identifier": "DETALHE-CONSULTA-EXAME-CONNECT",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/gestantes/detalheExame/getDetalhe",
-        "method": "GET",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-            "querystring": "?email=[[EMAIL]]"
-    }
-}
-```
+### Manager
+- Identifier: CRIAREXAME2
+- Url: https://api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/gestantes/detalheExame/getDetalhe
+- Method: GET
+- Header: Sim
+- Querystring: Sim
 
 ### REQUISIÇÕES
 ~~~ python

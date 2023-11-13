@@ -5,37 +5,19 @@
 - [Cadastro único](./cadastrounico.md)
 - [Núcleo de prevenção de violência](./nucleodeprevencaoaviolencia.md)
 
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "permissionLevel": 1,
-        "publishLevel": 0,
-        "name": "open",
-        "path": "MENU-SERVICO-UTILIDADEPUBLICA"
-    }
-]
-~~~
+### Action
+- Name: open
+- Path: MENU-SERVICO-UTILIDADEPUBLICA
+- PermissionLevel: 1
+- Parameters: Não
+- Querystring: Não
 
-### Corpo do path no manager
-``` json
-{
-    "identifier": "MENU-SERVICO-UTILIDADEPUBLICA",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/gestantes_cg/menuServicoUtilidadePublica/response",
-        "method": "GET",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-        "querystring": ""
-    }
-}
-
-```
+### Manager
+- Identifier: MENU-SERVICO-UTILIDADEPUBLICA
+- Url: https://api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/gestantes_cg/menuServicoUtilidadePublica/response
+- Method: GET
+- Header: Sim
+- Querystring: Não
 
 ### REQUISIÇÕES
 Esta tela não possui requisições

@@ -1,76 +1,32 @@
 [Voltar](./meuperfil.md)
 # Como calcular idade gestacional
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-    "order": 0,
-    "color": "#1AACB6",
-    "publishLevel": 0,
-    "permissionLevel": 1,
-    "title": "Calcular",
-    "name": "open",
-    "path": "MENU-CALCULO-IDADE-GESTACIONAL-CONNECT"
-    }
-]
+### Action1
+- Name: open
+- Path: MENU-CALCULO-IDADE-GESTACIONAL-CONNECT
+- PermissionLevel: 1
 
-# EM SEGUIDA ABRIRÁ UMA TELA COM OUTRO PATH PRA CHAMAR O FORMS
+EM SEGUIDA ABRIRÁ UMA TELA COM OUTRO PATH PRA CHAMAR O FORMS
 
-"actions": [
-    {
-        "order": 0,
-        "color": "#1AACB6",
-        "publishLevel": 0,
-        "permissionLevel": 1,
-        "title": "Calcular",
-        "name": "open-search",
-        "icon": "e9ac",
-        "path": "CALCULO-IDADE-GESTACIONAL-V2-CONNECT",
-            "parameters": [
-            {
-            "title": "initialSearchForm",
-            "value": "Calcule-semana"
-            }
-        ]
-    }
-]
+### Action2
+- Name: open
+- Path: CALCULO-IDADE-GESTACIONAL-V2-CONNECT
+- PermissionLevel: 1
+- parameters: Sim
+- Querystring: Não
 
-~~~
+### Manager1
+- Identifier: MENU-CALCULO-IDADE-GESTACIONAL-CONNECT
+- Url: https://api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/meuPerfil/menuCalculoIdadeGestacional/response
+- Method: GET
+- Header: Sim
+- Querystring: Sim
 
-### Corpo do path no manager
-~~~ json
-{
-    "identifier": "MENU-CALCULO-IDADE-GESTACIONAL-CONNECT",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/meuPerfil/menuCalculoIdadeGestacional/response",
-        "method": "GET",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-        "querystring": "?email=[[EMAIL]]"
-    }
-}
-
-// SEGUNDO PATH
-
-{
-    "identifier": "CALCULO-IDADE-GESTACIONAL-V2-CONNECT",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/meuPerfil/calculoIdadeGestacionalV2/response",
-        "method": "GET",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-        "querystring": "?email=[[EMAIL]]"
-    }
-}
-~~~
+### Manager2
+- Identifier: CALCULO-IDADE-GESTACIONAL-V2-CONNECT
+- Url: https://api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/meuPerfil/calculoIdadeGestacionalV2/responsee
+- Method: GET
+- Header: Sim
+- Querystring: Sim
 
 ### REQUISIÇÕES
 ~~~ python

@@ -1,42 +1,18 @@
 [Voltar](./historicoprenatais.md)
 # Histórico finalizado
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "name": "open",
-        "publishLevel": 1,
-        "permissionLevel": 2,
-        "path": "PRENATAL-FINALIZADO",
-        "parameters": [
-            {
-                "title": "querystring",
-                "value": f"?name=xxx-xxx"
-            }
-        ]
-    }
-]
-~~~
-
-
-### Corpo do path no manager
-``` json
-{
-    "identifier": "PRENATAL-FINALIZADO",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/meuPerfil/preNatalFinalizado/response",
-        "method": "GET",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-        "querystring": "?email=[[EMAIL]]"
-    }
-}
-```
+### Action
+- Name: open
+- Path: PRENATAL-FINALIZADO
+- PermissionLevel: 1
+- Parameters: Sim
+- Querystring: Sim
+  
+### Manager
+- Identifier: PRENATAL-FINALIZADO
+- Url: https://api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/meuPerfil/preNatalFinalizado/response
+- Method: GET
+- Header: Sim
+- Querystring: Não
 
 ### REQUISIÇÕES
 ~~~ python

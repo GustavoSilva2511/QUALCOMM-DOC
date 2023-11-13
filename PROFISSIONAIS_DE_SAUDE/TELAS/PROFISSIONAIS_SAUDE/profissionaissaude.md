@@ -1,35 +1,18 @@
 [Voltar](../../wikipedia.md)
 # Profissionais de saúde
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "publishLevel": 1,
-        "permissionLevel": 1,
-        "name": "open",
-        "path": "LISTAPROFISSIONAIS"
-    }
-]
-~~~
-
-### Corpo do path no manager
-``` json
-{
-    "identifier": "LISTAPROFISSIONAIS",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/app_profissionais_saude_SANDBOX/CMS/listaProfissionais/response",
-        "method": "GET",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-        "querystring": ""
-    }
-}
-```
+### Action
+- Name: open
+- Path: LISTAPROFISSIONAIS
+- PermissionLevel: 1
+- Parameters: Não
+- Querystring: Não
+ 
+### Manager
+- Identifier: LISTAPROFISSIONAIS
+- Url: https://api-connect.mobilex.tech/api/Qualcom/app_profissionais_saude_SANDBOX/CMS/listaProfissionais/response
+- Method: GET
+- Header: Sim
+- Querystring: Não
 
 ### REQUISIÇÕES
 ~~~ python

@@ -4,39 +4,19 @@
 - [Consultar exame](./consultarexame.md)
 - [Cadastrar exames](./cadastroexame.md)
 
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "name": "open",
-        "path":"CONSULTA-EXAME-CONNECT"
-    }
-]
-~~~
+### Action
+- Name: open
+- Path: CONSULTA-EXAME-CONNECT
+- PermissionLevel: 1
+- Parameters: Não
+- Querystring: Não
 
-### Corpo do path no manager
-``` json
-{
-    "identifier": "CONSULTA-EXAME-CONNECT",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/gestantes/consultaExame/get_exam",
-        "method": "POST",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-        "body": {
-            "email": "[[EMAIL]]"
-        }
-    }
-}
-
-```
+### Manager
+- Identifier: CONSULTA-EXAME-CONNECT
+- Url: https://api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/gestantes/consultaExame/get_exam
+- Method: POST
+- Header: Sim
+- Querystring: Não
 
 ### REQUISIÇÕES
 ~~~ python

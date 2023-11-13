@@ -1,82 +1,32 @@
 [Voltar](../../wikipedia.md)
 # Unidades de saúde
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "publishLevel": 1,
-        "permissionLevel": 1,
-        "name": "open",
-        "path": "DISTRITOS"
-    }
-]
-~~~
+### Action
+- Name: open
+- Path: DISTRITOS
+- PermissionLevel: 1
+- Parameters: Não
+- Querystring: Não
+ 
+### Manager
+- Identifier: DISTRITOS
+- Url: https://api-connect.mobilex.tech/api/Qualcom/app_profissionais_saude_SANDBOX/CMS/distritos/response
+- Method: GET
+- Header: Sim
+- Querystring: Não
 
-### Corpo do path no manager
-``` json
-{
-    "identifier": "DISTRITOS",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/app_profissionais_saude_SANDBOX/CMS/distritos/response",
-        "method": "GET",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-        "querystring": ""
-    }
-}
-```
-
-### ACTIONS 
-~~~ python
-"actions": [
-    {
-        "order": 2,
-        "publishLevel": 1,
-        "permissionLevel": 1,
-        "name": "share",
-        "title": "Compartilhar Unidade de saúde",
-        "parameters": [
-            {
-                "title": "text",
-                "value": f"{unit['full_name']}\n{unit.get('address', 'Endereço não atribuído')}\nTel.: 83 3077-1321"
-            }
-        ]
-    },
-    {
-        "order": 0,
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "title": "Abrir no mapa",
-        "icon": "e9db",
-        "name": "maps",
-        "parameters": [
-            {
-                "title": "Endereço",
-                "value": unit.get('address', "Endereço não atribuído")
-            }
-        ]
-    },
-    {
-        "order": 1,
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "title": "Ligar para",
-        "icon": "e9ef",
-        "name": "call",
-        "parameters": [
-            {
-                "title": unit.get('full_name'),
-                "value": "83 3077-1321"
-            }
-        ]
-    }
-]
-~~~
+### Funções
+- Name: share
+- PermissionLevel: 1
+- Parameters: sim
+--------------------------
+- Name: maps
+- PermissionLevel: 1
+- Parameters: sim
+--------------------------
+- Name: call
+- PermissionLevel: 1
+- Parameters: sim
+--------------------------
 
 ### REQUISIÇÕES
 ~~~ python

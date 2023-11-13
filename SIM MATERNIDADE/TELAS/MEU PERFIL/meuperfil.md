@@ -7,39 +7,21 @@
 - [Como calcular idade gestacional](./comocalcularidadegestacional.md)
 - [Historico de Pré Natais](./historicoprenatais.md)
 
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "name": "open",
-        "publishLevel": 1,
-        "permissionLevel": 2,
-        "path": "MENU-MEU-PERFIL-CONNECT"
-    }
-]
-~~~
+### Action
+- Name: open
+- Path: MENU-MEU-PERFIL-CONNECT
+- PermissionLevel: 2
+- Parameters: Não
+- Querystring: Não
+  
+### Manager
+- Identifier: MENU-MEU-PERFIL-CONNECT
+- Url: https://api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/meuPerfil/menuMeuPerfil/response
+- Method: GET
+- Header: Sim
+- Querystring: Sim
 
-
-### Corpo do path no manager
-``` json
-{
-    "identifier": "MENU-MEU-PERFIL-CONNECT",
-    "serviceConfiguration": {
-      "permissionLevel": 1,
-      "publishLevel": 1,
-      "protocol": "https",
-      "url": "api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/meuPerfil/menuMeuPerfil/response",
-      "method": "GET",
-      "header": {
-        "Authorization": "TOKEN connect"
-      },
-      "querystring": "?email=[[EMAIL]]&nome=[[SURNAME]]&sobrenome=[[NAME]]"
-    }
-}
-```
 ## REQUISIÇÕES
-
 ~~~ python
 # Dados do perfil
 get("https://neo-qualcomm-homo.mobilex.tech/api/method/myprofile?email=xxx@email", TOKEN)

@@ -1,39 +1,18 @@
 [Voltar](./unidadesdeatendimento.md)
 # Unidades de saude
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "color": "#1AACB6",
-        "publishLevel": 0,
-        "permissionLevel": 1,
-        "title": "Unidades de saúde",
-        "name": "open",
-        "icon": "e9ac",
-        "path": "UNIDADE-SAUDE-CONNECT"
-    }
-]
-~~~
+### Action
+- Name: open
+- Path: UNIDADE-SAUDE-CONNECT
+- PermissionLevel: 1
+- Parameters: Não
+- Querystring: Não
 
-### Corpo do path no manager
-``` json
-{
-    "identifier": "UNIDADE-SAUDE-CONNECT",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/gestantes_cg/unidadeSaude/response",
-        "method": "GET",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-        "querystring": ""
-    }
-}
-
-```
+### Manager
+- Identifier: UNIDADE-SAUDE-CONNECT
+- Url: https://api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/gestantes_cg/unidadeSaude/response
+- Method: GET
+- Header: Sim
+- Querystring: Não
 
 ### REQUISIÇÕES
 Esta tela não possui requisições

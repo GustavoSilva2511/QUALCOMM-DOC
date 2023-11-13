@@ -1,35 +1,18 @@
 [Voltar](../../wikipedia.md)
 # Canais de atendimento
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "publishLevel": 1,
-        "permissionLevel": 1,
-        "name": "open",
-        "path": "CANAISATENDIMENTO"
-    }
-]
-~~~
-
-### Corpo do path no manager
-``` json
-{
-    "identifier": "CANAISATENDIMENTO",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/app_profissionais_saude_SANDBOX/CMS/canaisAtendimento/response",
-        "method": "GET",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-        "querystring": ""
-    }
-}
-```
+### Action
+- Name: open
+- Path: CANAISATENDIMENTO
+- PermissionLevel: 1
+- Parameters: Não
+- Querystring: Não
+ 
+### Manager
+- Identifier: CANAISATENDIMENTO
+- Url: https://api-connect.mobilex.tech/api/Qualcom/app_profissionais_saude_SANDBOX/CMS/canaisAtendimento/response
+- Method: GET
+- Header: Sim
+- Querystring: Não
 
 ### REQUISIÇÕES
 Esta pagina não possui requisições

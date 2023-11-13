@@ -3,44 +3,19 @@
 ### LINKS
 - [Anexos exame](./anexosexame.md)
   
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "publishLevel": 1,
-        "permissionLevel": 1,
-        "title": "Exames",
-        "icon":"",
-        "name": "open",
-        "path": "HISTORICOEXAMES",
-        "parameters": [
-            {
-                "title": "querystring",
-                "value": f"?email={gestante['email']}&profissional_email={request.args.get('email')}"
-            }
-        ]
-    }
-]
-~~~
-
-### Corpo do path no manager
-``` json
-{
-    "identifier": "HISTORICOEXAMES",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/app_profissionais_saude_SANDBOX/CMS/historicoExames/response",
-        "method": "GET",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-        "querystring": ""
-    }
-}
-```
+### Action
+- Name: open
+- Path: HISTORICOEXAMES
+- PermissionLevel: 1
+- Parameters: Sim
+- Querystring: Sim
+ 
+### Manager
+- Identifier: HISTORICOEXAMES
+- Url: https://api-connect.mobilex.tech/api/Qualcom/app_profissionais_saude_SANDBOX/CMS/historicoExames/response
+- Method: GET
+- Header: Sim
+- Querystring: Não
 
 ### REQUISIÇÕES
 ~~~ python

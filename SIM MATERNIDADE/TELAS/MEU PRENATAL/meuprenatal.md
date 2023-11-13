@@ -6,36 +6,19 @@
 - [Exames](./EXAMES/exames.md)
 - [Vacinas](./VACINAS/vacinas.md)
   
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "name": "open",
-        "publishLevel": 1,
-        "permissionLevel": 2,
-        "path": "MENU-CONNECT"
-    }
-]
-~~~
-
-### Corpo do path no manager
-``` json
-{
-    "identifier": "MENU-CONNECT",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/gestantes/menu/menu",
-        "method": "GET",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-        "querystring": "?email=[[EMAIL]]&nome=[[SURNAME]]&sobrenome=[[NAME]]"
-    }
-}
-```
+### Action
+- Name: open
+- Path: MENU-CONNECT
+- PermissionLevel: 2
+- Parameters: Não
+- Querystring: Não
+  
+### Manager
+- Identifier: MENU-CONNECT
+- Url: https://api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/gestantes/menu/menu
+- Method: GET
+- Header: Sim
+- Querystring: Sim
 
 ## REQUISIÇÕES
 ~~~ python

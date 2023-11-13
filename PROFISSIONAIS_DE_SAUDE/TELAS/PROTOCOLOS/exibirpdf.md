@@ -1,40 +1,18 @@
 [Voltar](./protocolos.md)
 # Exibir pdf
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "name": "open-pdf",
-        "title": "Fluxo Entrega Voluntária",
-        "path": "EXIBE_PDF",
-        "parameters": [
-            {
-                "title":"querystring",
-                "value":"?name=568e9f2a57"
-            }
-        ]
-    }
-]
-~~~
-
-### Corpo do path no manager
-``` json
-{
-    "identifier": "EXIBE_PDF",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/app_profissionais_saude_SANDBOX/CMS/protocolos/exibe_pdf",
-        "method": "GET",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-        "querystring": ""
-    }
-}
-```
+### Action
+- Name: open-pdf
+- Path: EXIBE_PDF
+- PermissionLevel: 1
+- Parameters: Sim
+- Querystring: Sim
+ 
+### Manager
+- Identifier: EXIBE_PDF
+- Url: https://api-connect.mobilex.tech/api/Qualcom/app_profissionais_saude_SANDBOX/CMS/protocolos/exibe_pdf
+- Method: GET
+- Header: Sim
+- Querystring: Não
 
 ### REQUISIÇÕES
 ~~~ python

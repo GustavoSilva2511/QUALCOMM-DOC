@@ -4,39 +4,19 @@
 - [Histórico finalizado](./historicofinalizado.md)
 - [Histórico atual](../MEU%20PRENATAL/meuprenatal.md)
 
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "color": "#1AACB6",
-        "publishLevel": 0,
-        "permissionLevel": 1,
-        "title": "Calcular",
-        "name": "open",
-        "path": "HISTORICO-PRENATAL"
-    }
-]
-~~~
-
-
-### Corpo do path no manager
-``` json
-{
-    "identifier": "HISTORICO-PRENATAL",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/meuPerfil/historicoPreNatal/response",
-        "method": "GET",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-        "querystring": "?email=[[EMAIL]]&nome=[[NAME]]&sobrenome=[[SURNAME]]"
-    }
-}
-```
+### Action
+- Name: open
+- Path: HISTORICO-PRENATAL
+- PermissionLevel: 1
+- Parameters: Não
+- Querystring: Não
+  
+### Manager
+- Identifier: HISTORICO-PRENATAL
+- Url: https://api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/meuPerfil/historicoPreNatal/response
+- Method: GET
+- Header: Sim
+- Querystring: Sim
 
 ### REQUISIÇÕES
 ~~~ python

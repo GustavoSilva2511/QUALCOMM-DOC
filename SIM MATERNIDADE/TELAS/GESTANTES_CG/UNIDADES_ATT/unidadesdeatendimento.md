@@ -6,36 +6,19 @@
 - [Academias de saúde](./academiasdesaude.md)
 - [Serviços de saúde mental](./servicossausemental.md)
   
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "permissionLevel": 1,
-        "publishLevel": 0,
-        "name": "open",
-        "path": "GESTANTES-UNIDADES-ATENDIMENTO-CONNECT"
-    }
-]
-~~~
+### Action
+- Name: open
+- Path: GESTANTES-UNIDADES-ATENDIMENTO-CONNECT
+- PermissionLevel: 1
+- Parameters: Não
+- Querystring: Não
 
-### Corpo do path no manager
-``` json
-{
-    "identifier": "GESTANTES-UNIDADES-ATENDIMENTO-CONNECT",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/gestantes_cg/unidadesDeAtendimento/response",
-        "method": "GET",
-        "header": {
-            "Authorization": "TOKEN"
-        },
-        "querystring": ""
-    }
-}
-```
+### Manager
+- Identifier: GESTANTES-UNIDADES-ATENDIMENTO-CONNECT
+- Url: https://api-connect.mobilex.tech/api/Qualcom/gestantes_campinagrande_SANDBOX/gestantes_cg/unidadesDeAtendimento/response
+- Method: GET
+- Header: Sim
+- Querystring: Não
 
 ### REQUISIÇÕES
 Esta tela não possui requisições

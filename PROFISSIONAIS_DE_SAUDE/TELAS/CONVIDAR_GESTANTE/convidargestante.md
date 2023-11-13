@@ -1,49 +1,18 @@
 [Voltar](../../wikipedia.md)
 # Convidar gestante
-### Como chamar o path
-~~~ python
-"actions": [
-    {
-        "order": 0,
-        "publishLevel": 1,
-        "permissionLevel": 1,
-        "name": "open-search",
-        "icon": "e9fa",
-        "path": "convidargestante",
-        "parameters": [
-            {
-                "title": "initialSearchForm",
-                "value": "a11c35ae-bb0e-4e9a-9c9c-bb802e6ecb94"
-            },
-            {
-                "title": "formParameters",
-                "value": "",
-                "name": "home"
-            }
-        ]
-    }
-]
-~~~
-
-### Corpo do path no manager
-``` json
-// Mapeamento forms 
-{
-    "identifier": "CONVIDARGESTANTE",
-    "serviceConfiguration": {
-        "permissionLevel": 1,
-        "publishLevel": 1,
-        "protocol": "https",
-        "url": "api-connect.mobilex.tech/api/Qualcom/app_profissionais_saude_SANDBOX/CMS/convidarGestante/response",
-        "method": "GET",
-        "header": {
-            "Authorization": "TOKEN",
-            "Email": "[[EMAIL]]"
-        },
-        "querystring": ""
-    }
-}
-```
+### Action
+- Name: open-search
+- Path: CONVIDARGESTANTE
+- PermissionLevel: 1
+- Parameters: Sim
+- Querystring: Não
+ 
+### Manager
+- Identifier: CONVIDARGESTANTE
+- Url: https://api-connect.mobilex.tech/api/Qualcom/app_profissionais_saude_SANDBOX/CMS/convidarGestante/response
+- Method: GET
+- Header: Sim
+- Querystring: Não
 
 ### REQUISIÇÕES
 ~~~ python
